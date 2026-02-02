@@ -11,6 +11,63 @@
 
   <script>
 
+    // Functions
+    // little package that you could use over 
+    // and over again without having to rewrite 
+    // or change the code.
+
+    function favoriteMovie(movie) 
+    {
+      return movie + " is my favorite movie!";
+    }
+
+    const message = favoriteMovie("Avatar");
+    console.log(message);
+
+
+    // Local and Outer variables
+    let name = "Jake";
+
+    function showMessage() 
+    {
+      let name = "Bob";
+      return "Hello, " + name;
+    }
+    console.log(name);
+
+    // Function expressions
+    let sayHi = function() 
+    {
+      return "Hello";
+    };
+    let func = sayHi();
+    console.log(func);
+
+    // Arrow function
+    let favoriteColor = (color) => 
+    {
+      return color + " is my favorite color";
+    }
+    console.log(favoriteColor("Purple"));
+
+    // Call Stack
+    function add(a, b) 
+    {
+      return a + b;
+    }
+
+    function average(a, b) 
+    {
+      return add(a, b) / 2;
+    }
+
+    let x = average(10, 20);
+    console.log(x);
+
+
+
+
+
 
 
 
