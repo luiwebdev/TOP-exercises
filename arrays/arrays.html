@@ -78,6 +78,15 @@
         })
         console.log(sum);
 
+        // sum of tripled evens
+        function sumOfTripledEven(array) {
+            return array
+                .filter((num) => num % 2 == 0)
+                .map((num) => num * 3)
+                .reduce((total, num) => total + num);
+        }
+        console.log(sumOfTripledEven([1, 2, 3, 4, 5, 6]));
+
 
     </script>
 
