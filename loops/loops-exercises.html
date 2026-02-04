@@ -21,15 +21,70 @@
 
             if (j % 2 == 0) {
                 console.log(j);
-            } 
+            }
         }
 
-        // 3. Sum of numbers from 1 to 100
+        // 3. Sum of numbers from 1 to 20
         let sum = 0;
-        for (let a = 1; a <= 100; a++) {
+        for (let a = 1; a <= 20; a++) {
             sum = sum + a;
             console.log(sum);
         }
+
+
+        // While exercises
+
+        // 1. Count from 1 to 10
+        let count = 0;
+        while (count <= 10) {
+            console.log(count);
+            count++;
+        }
+
+        // 2. Even numbers from 2 to 20
+        let evenNumbers = 2;
+        while (evenNumbers <= 20) {
+            if (evenNumbers % 2 == 0) {
+                console.log(evenNumbers);
+            }
+            evenNumbers++;
+        }
+
+        // 3. Countdown
+        // print numbers from 10 down to 1
+        let countDown = 10;
+        while (countDown >= 1) {
+            console.log(countDown);
+            countDown--;
+        }
+
+        // 4. Sum of numbers
+        // calculate the sum of numbers from 1 to 10
+        let countSum = 1;
+        let sum2 = 0
+        while (countSum <= 10) {
+            sum = sum + countSum;
+            console.log(sum);
+            countSum++;
+        }
+
+        // 5. Multiplication table
+        // print the multiplication table of 5
+        let countMultiplication = 1;
+        while (countMultiplication <= 10) {
+            console.log(`5 x ${countMultiplication} = ${5 * countMultiplication}`);
+            countMultiplication++;
+        }
+
+        // 6. Loop through an array
+        let fruits = ["apple", "banana", "mango", "orange"];
+        let countFruit = 0;
+        while (countFruit < fruits.length) {
+            console.log(fruits[countFruit]);
+            countFruit++;
+        }
+
+
 
 
 
