@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arrays Exercises</title>
 </head>
+
 <body>
 
     <script>
@@ -16,18 +18,37 @@
         // example - camelize("background-color") == 'backgroundColor';
         function camelize(str) {
             return str
-            .split("-") // split the str into array
-            // capitalize the first letter of all item except the first one
-            .map((word, index) => index == 0 ? word : 
-            word[0].toUpperCase() + word.slice(1))
-            .join("");
+                .split("-") // split the str into array
+                // capitalize the first letter of all item except the first one
+                .map((word, index) => index == 0 ? word :
+                    word[0].toUpperCase() + word.slice(1))
+                .join("");
         }
-
         console.log(camelize("border-left-width"));
+
+        // 2. Filter range
+        // Write a function filterRange(arr, a, b) that gets an array arr,
+        // looks for elements with values higher or equal to a and lower or 
+        // equal to b and return a result as an array.
+        let array5 = [10, 3, 725, -7]
+        function filterRange(arr, a, b) {
+            return arr.filter((num) => {
+                if (num >= a && num <= b) {
+                    return num;
+                }
+            })
+        }
+        console.log(filterRange(array5, 1, 40));
+
+       
+
+
+
 
 
 
     </script>
-    
+
 </body>
+
 </html>
