@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop Exercises</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        // While exercises
+
+        // 1. Count from 1 to 10
+        let count = 0;
+        while (count <= 10) {
+            console.log(count);
+            count++;
+        }
+
+        // 2. Even numbers from 2 to 20
+        let evenNumbers = 2;
+        while (evenNumbers <= 20) {
+            if (evenNumbers % 2 == 0) {
+                console.log(evenNumbers);
+            }
+            evenNumbers++;
+        }
+
+        // 3. Countdown
+        // print numbers from 10 down to 1
+        let countDown = 10;
+        while (countDown >= 1) {
+            console.log(countDown);
+            countDown--;
+        }
+
+        // 4. Sum of numbers
+        // calculate the sum of numbers from 1 to 10
+        let countSum = 1;
+        let sum2 = 0
+        while (countSum <= 10) {
+            sum = sum + countSum;
+            console.log(sum);
+            countSum++;
+        }
+
+        // 5. Multiplication table
+        // print the multiplication table of 5
+        let countMultiplication = 1;
+        while (countMultiplication <= 10) {
+            console.log(`5 x ${countMultiplication} = ${5 * countMultiplication}`);
+            countMultiplication++;
+        }
+
+        // 6. Loop through an array
+        let fruits = ["apple", "banana", "mango", "orange"];
+        let countFruit = 0;
+        while (countFruit < fruits.length) {
+            console.log(fruits[countFruit]);
+            countFruit++;
+        }
+
+        // 7. User input loop
+        // keep asking the user for a number until they enter 0
+        // When they do, print the sum of all entered numbers
+        // let userSum = 0;
+        // let number;
+        // while (number !== 0) {
+        //     number = Number(prompt("Enter a number: "));
+        //      userSum = userSum + number;
+        
+        // }
+        // console.log(userSum);
+
+        // 8. Guess the number
+        // Pick a secret number (hardcode it for now).
+        // Keep asking the user to guess.
+        // Stop when they guess correctly.
+        // Print how many attempts it took.
+        // let secretNumber;
+        // let attempt = 0;
+        // while (secretNumber !== 5) {
+        //     secretNumber = Number(prompt("Guess the secret number between 1-10: "));
+        //     attempt = attempt + 1;
+        // }
+        // console.log(`Number of attempt: ${attempt}`);
+
+        // 9. Reverse a number
+        let number9 = 12345;
+
+        // convert the number to a string
+        let number9String = String(number9);
+        let reversed = "";
+
+        // grab the last letter
+        // store the last letter in a variable
+        // delete the last letter
+        while (number9String.length > 0) {
+            let lastLetter = number9String.charAt(number9String.length - 1);
+            reversed = reversed + lastLetter;
+            number9String = number9String.slice(0, number9String.length - 1);
+        }
+        number9 = Number(reversed);
+        console.log(number9);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
