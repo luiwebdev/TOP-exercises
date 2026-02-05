@@ -84,6 +84,68 @@
             countFruit++;
         }
 
+        // 7. User input loop
+        // keep asking the user for a number until they enter 0
+        // When they do, print the sum of all entered numbers
+        // let userSum = 0;
+        // let number;
+        // while (number !== 0) {
+        //     number = Number(prompt("Enter a number: "));
+        //      userSum = userSum + number;
+        
+        // }
+        // console.log(userSum);
+
+        // 8. Guess the number
+        // Pick a secret number (hardcode it for now).
+        // Keep asking the user to guess.
+        // Stop when they guess correctly.
+        // Print how many attempts it took.
+        // let secretNumber;
+        // let attempt = 0;
+        // while (secretNumber !== 5) {
+        //     secretNumber = Number(prompt("Guess the secret number between 1-10: "));
+        //     attempt = attempt + 1;
+        // }
+        // console.log(`Number of attempt: ${attempt}`);
+
+        // 9. Reverse a number
+        let number9 = 12345;
+
+        // convert the number to a string
+        let number9String = String(number9);
+        let reversed = "";
+
+        // grab the last letter
+        // store the last letter in a variable
+        // delete the last letter
+        while (number9String.length > 0) {
+            let lastLetter = number9String.charAt(number9String.length - 1);
+            reversed = reversed + lastLetter;
+            number9String = number9String.slice(0, number9String.length - 1);
+        }
+        number9 = Number(reversed);
+        console.log(number9);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
