@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do while Exercises</title>
+</head>
+<body>
+
+    <script>
+
+        // 1. Print numbers from 1 to 5
+        let numbers = 1;
+        do {
+            console.log(numbers);
+            numbers++;
+        } while (numbers <= 5)
+
+        // 2. Print even numbers from 2 to 10
+        let evenNumber = 2;
+        do {
+            if (evenNumber % 2 == 0) {
+                console.log(evenNumber);
+            }
+            evenNumber++;
+        } while (evenNumber <= 10)
+
+        // 3. Sum numbers from 1 to 10
+        let number3 = 1;
+        let sum = 0;
+        do {
+            sum = sum + number3;
+            number3++;
+        } while (number3 <= 10)
+        console.log(sum)
+
+        // 4. Print a message at least once
+        let number4 = 1;
+        do {
+            console.log("Hello");
+            number4++;
+        } while (number4 < 1);
+
+        // 5. Keep asking until the number is greater than 10
+        // let response;
+        // do {
+        //     response = Number(prompt("Enter a number: "));
+        // } while (response !== 10);
+
+        // 6. Reverse a string
+        let str = "hello";
+        let reversed = "";
+        let i = str.length - 1;
+        do {
+            reversed = reversed + str[i];
+            i--;
+        } while (i >= 0);
+        console.log(reversed);
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>
