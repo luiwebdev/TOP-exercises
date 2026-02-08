@@ -16,21 +16,21 @@
         let colors = ["blue", "red", "yellow"];
 
         console.log(colors);
-        console.log(colors[0]);
-        console.log(colors[1]);
-        console.log(colors[2]);
+        console.log(colors[0]); // blue
+        console.log(colors[1]); // red
+        console.log(colors[2]); // yellow
 
-        // pop -  adds an element to the end
-        console.log(colors.pop());
+        // pop -  remove the last element
+        console.log(colors.pop()); // yellow
 
-        // push - takes an element from the end
-        colors.push("purple");
+        // push - add one or more elements at the end
+        colors.push("purple", "pink");
         console.log(colors);
 
-        // shift - extract the first element of the array
+        // shift - remove the first element
         console.log(colors.shift());
 
-        // unshift - add the element to the beginning
+        // unshift - add one or more element at the start
         colors.unshift("green");
         console.log(colors);
 
@@ -39,7 +39,7 @@
             console.log(colors[i]);
         }
 
-        // for...of
+        // for...of - create a loop over the values of the array
         for (let color of colors) {
             console.log(color);
         }
@@ -55,19 +55,19 @@
         // map - create a new array by performing a 
         // function on each array element.
         // does not change the original array
-        const numbers1 = [1, 2, 3, 456, 937, 5];
+        const numbers1 = [1, 2, 3];
         const numbers2 = numbers1.map((num, index) => {
             return num * 2;
         })
-        console.log(numbers2);
+        console.log(numbers2); // [2, 4, 6]
 
         // filter - create a new array with array elements
         // that pass a test
-        const numbers3 = [60, 72, 9, 2, 1002];
+        const numbers3 = [1, 2, 3];
         const numbers4 = numbers3.filter((num) => {
-            return num > 50;
+            return num > 1;
         })
-        console.log(numbers4);
+        console.log(numbers4); // [2, 3]
 
         // reduce -  runs a function on each array element to 
         // produce a single value.
@@ -76,7 +76,7 @@
         const sum = numbers5.reduce((total, num) => {
             return total + num;
         })
-        console.log(sum);
+        console.log(sum); // 15
 
         // sum of tripled evens
         function sumOfTripledEven(array) {
