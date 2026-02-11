@@ -11,36 +11,95 @@
 
     <script>
 
-        // 1. Translate border-left-width to borderLeftWidth
-        // Write the function camelize(str) that changes dash-separated 
-        // words like “my-short-string” into camel-cased “myShortString”.
-
-        // example - camelize("background-color") == 'backgroundColor';
-        function camelize(str) {
-            return str
-                .split("-") // split the str into array
-                // capitalize the first letter of all item except the first one
-                .map((word, index) => index == 0 ? word :
-                    word[0].toUpperCase() + word.slice(1))
-                .join("");
+        // 1. Create an array of 5 numbers and print all elements using a loop
+        let array1 = [1, 2, 3, 4, 5];
+        for (let arr1 of array1) {
+            console.log(arr1);
         }
-        console.log(camelize("border-left-width"));
 
-        // 2. Filter range
-        // Write a function filterRange(arr, a, b) that gets an array arr,
-        // looks for elements with values higher or equal to a and lower or 
-        // equal to b and return a result as an array.
-        let array5 = [10, 3, 725, -7]
-        function filterRange(arr, a, b) {
-            return arr.filter((num) => {
-                if (num >= a && num <= b) {
-                    return num;
-                }
-            })
+        // 2. Find the length of an array without using the length property.
+        let array2 = [1, 2, 3];
+        let array2Length = 0;
+        for (let arr2 of array2) {
+            array2Length++;
         }
-        console.log(filterRange(array5, 1, 40));
+        console.log(array2Length);
 
-       
+        // 3. Print the first and last elements of an array.
+        let array3 = [1, 2, 3];
+        for (let i = 0; i < array3.length; i++) {
+            if (i == 0) {
+                console.log(array3[i]);
+            } else if (i == array3.length - 1) {
+                console.log(array3[i]);
+            }
+        }
+
+        // 4. Add a new element to the end of an array
+        let array4 = [1, 2, 3];
+        array4.push(4);
+        console.log(array4);
+
+        // 5. Find the sum of all numbers in an array.
+        let array5 = [1, 2, 3];
+        let array5Sum = array5.reduce((sum, num) => {
+            return sum + num;
+        })
+        console.log(array5Sum);
+
+        // 6. Check if an array contains a specific value.
+        let array6 = ["blue", "beige", "red"];
+        let array6Check = array6.includes("blue");
+        console.log(array6Check);
+
+        // 7. Find the index of a given element.
+        let array7 = [1, 2, 3];
+        let num = 1;
+        let index = array7.indexOf(num);
+        console.log(index);
+
+        // 8. Remove duplicate values from an array.
+        let array8 = [5, 5, 3, 2, 2];
+        let array8New = array8.filter((item, index) => {
+            return array8.indexOf(item) == index;
+        })
+        console.log(array8New);
+
+        // 9. Sort an array of numbers in ascending order.
+        let array9 = [2, 1, 4, 5, 9];
+        let array9Sort = array9.sort((a, b) => {
+            return a - b;
+        })
+        console.log(array9Sort);
+
+        // 10. Reverse an array without using .reverse().
+        let array10 = ["blue", "red", "yellow"];
+        let array10Reversed = [];
+
+        for (let i = array10.length - 1; i >= 0; i--) {
+            array10Reversed.push(array10[i]);
+        }
+        console.log(array10Reversed);
+
+        // 11. Count even numbers
+        let array11 = [1, 2, 3, 4, 5, 6];
+        let evenNumbers = 0;
+        for (let i = 0; i < array11.length; i++) {
+            if (array11[i] % 2 == 0) {
+                evenNumbers++;
+            }
+        }
+        console.log(evenNumbers);
+
+
+
+
+
+
+
+
+
+
 
 
 
