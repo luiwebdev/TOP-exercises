@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+
+<body>
+
+    <h1 id="title">Hello World!</h1>
+    <div id="list"></div>
+
+    <div class="list-nodes">
+        <button id="one">Click One</button>
+        <button id="two">Click Two</button>
+        <button id="three">Click Three</button>
+    </div>
+
+
+
+
+
+    <script>
+
+        // take element by id
+        const title = document.querySelector("#title");
+        const list = document.querySelector("#list");
+        const buttons = document.querySelectorAll("button")
+
+        // create element 
+        const list1 = document.createElement("li");
+
+        // give content to element
+        list1.textContent = "List 1";
+
+        // append element
+        list.appendChild(list1);
+
+        // add css style
+        title.style.cssText = "color: tomato; background: lightblue;";
+
+        // events
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                console.log(button.id);
+            })
+        })
+
+
+
+
+    </script>
+
+</body>
+
+</html>
