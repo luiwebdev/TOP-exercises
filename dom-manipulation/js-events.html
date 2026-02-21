@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <button id="btn">Click Me!</button>
+        <a href="https://google.com/">Google</a>
+    </div>
+
+
+
+    <script>
+
+        const container = document.querySelector("#container")
+        const btn = document.querySelector("#btn");
+        const link = document.querySelector("a");
+
+        // addEventListener
+        btn.addEventListener("click", () => {
+            console.log("Clicked");
+        })
+
+        // preventDefault()
+        link.addEventListener("click", (e) => {
+            console.log("clicked");
+            e.preventDefault();
+        })
+
+        // stopPropagation()
+        btn.addEventListener("click", (e) => {
+            console.log("The button was clicked!");
+            e.stopPropagation();
+        })
+
+        document.body.addEventListener('click', function (event) {
+            console.log('The body was clicked!');
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>
