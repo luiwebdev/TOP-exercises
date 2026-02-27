@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Events</title>
+</head>
+
+<body>
+
+    <button class="btn">Click</button>
+
+    <div class="background">Background Color</div>
+
+
+    <script>
+
+        const btn = document.querySelector(".btn");
+        const background = document.querySelector(".background");
+
+        const catFound = new CustomEvent("animalFound", {
+            detail: {
+                name: "cat",
+            },
+        });
+
+        const blueBG = new CustomEvent("blueBackground", {
+            detail: {
+                backgroundColor: "blue",
+            },
+        });
+
+        btn.addEventListener("animalFound", (event) => {
+            console.log(event);
+        });
+
+        background.addEventListener("blueBackground", (e) => {
+            background.style.background = e.detail.backgroundColor;
+        })
+
+        btn.dispatchEvent(catFound);
+        background.dispatchEvent(blueBG)
+;
+
+        
+
+
+
+    </script>
+
+</body>
+
+</html>
