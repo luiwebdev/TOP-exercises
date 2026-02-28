@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+</head>
+<body>
+
+    <script>
+
+        function greeting(greet, callback) {
+            const answer = greet;
+            callback(answer); 
+        }
+
+        function message(greet) {
+            console.log(greet);
+        }
+
+        greeting("Hello World!", message);
+
+    </script>
+    
+</body>
+</html>
