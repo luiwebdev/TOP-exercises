@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of objects exercises</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        // Data
+        const products = [
+            { id: 1, name: "Laptop", price: 1000, category: "electronics", stock: 3 },
+            { id: 2, name: "Phone", price: 600, category: "electronics", stock: 5 },
+            { id: 3, name: "Shirt", price: 40, category: "clothing", stock: 10 },
+            { id: 4, name: "Pants", price: 60, category: "clothing", stock: 4 },
+            { id: 5, name: "Headphones", price: 100, category: "electronics", stock: 2 }
+        ];
+
+        // 1. Total price
+        // calculate the total price of all products
+        const totalPrice = products.reduce((total, product) => {
+            return total + product.price;
+        }, 0)
+        console.log(`Total price: ${totalPrice}`);
+
+        // 2. Total inventory value
+        // price * stock for each product, then sum
+        const totalInventoryValue = products.reduce((inventory, item) => {
+            let priceStock = item.price * item.stock;
+            return inventory + priceStock;
+
+        }, 0)
+        console.log(totalInventoryValue);
+
+        // 3. Total number of products
+        // count how many items are
+        const totalProducts = products.reduce((acc, item) => {
+            // if (item) {
+            //     acc = acc + 1;
+            // }
+            // return acc
+
+            acc = item ? acc + 1 : acc + 0;
+            return acc;
+        }, 0)
+        console.log(totalProducts);
+
+        // 4. Total stock
+        // sum all stock values.
+        const totalStock = products.reduce((acc, item) => {
+            acc = acc + item.stock;
+            return acc;
+        }, 0);
+        console.log(`Total stock: ${totalStock}`);
+
+        // 5 Count products by category
+        // { electronics: 3, clothing: 2 }
+        const countCategory = products.reduce((acc, item) => {
+            acc[item.category] = acc[item.category] ? acc[item.category] + 1 : 1;
+            return acc;
+        }, {});
+        console.log("Count caterogies: ")
+        console.log(countCategory);
+
+        // 6. Group products by category
+        // create an object like:
+        // {
+        //    electronics: [...],
+        //    clothing: [...]
+        // }
+        const groupCategory = products.reduce((acc, item) => {
+            if (!acc[item.category]) {
+                acc[item.category] = [];
+            }
+
+            acc[item.category].push(item);
+            return acc;
+        }, {});
+        console.log(groupCategory);
+
+        // 7. Find the most expensive product
+        // return the product with the highest price.
+        const expensiveProduct = products.reduce((max, item) => {
+            if (item.price > max.price) {
+                return item;
+            } else {
+                return max;
+            }
+        }, products[0]);
+        console.log(expensiveProduct);
+
+        // 8. Low stock products
+        // return an array of products where stock <= 3.
+        const lowStockProducts = products.reduce((acc, item) => {
+            if (item.stock <= 3) {
+                acc.push(item);
+            }
+            return acc;
+        }, []);
+        console.log(lowStockProducts);
+
+       
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
