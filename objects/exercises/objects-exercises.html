@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects Exercises</title>
+</head>
+
+<body>
+
+    <script>
+
+        // given: 
+        const users = [
+            { name: "Alice", age: 25 },
+            { name: "Bob", age: 30 }
+        ];
+
+        // 1. print all user names.
+        const userNames = users.map((user) => {
+            return user.name;
+        })
+        console.log(userNames);
+
+        // 2. Add new user
+        const user = {
+            name: "Charlie",
+            age: 28
+        };
+        users.push(user);
+        console.log(users);
+
+        // 3. Loop through array
+        // print:
+        // Alice is 25 years old
+        // Bob is 30 years old
+        for (let i = 0; i < users.length; i++) {
+            console.log(`${users[i].name} is ${users[i].age} old`);
+        }
+
+        // 4. Filter data
+        // get users older than 24.
+        const older = users.filter((user) => {
+            return user.age > 24;
+        });
+        console.log(older);
+
+        // 5. Find object
+        // find the user with name "Bob".
+        const bob = users.filter((user) => {
+            return user.name == "Bob";
+        });
+        console.log(bob);
+
+
+        const products = [
+            { name: "Laptop", price: 1000 },
+            { name: "Phone", price: 500 }
+        ];
+
+        // 6. Reduce sum values
+        // calculate total price.
+        const sumValues = products.reduce((acc, item) => {
+            return acc + item.price;
+        }, 0)
+        console.log(sumValues);
+
+
+        const people = [
+            { name: "Alice", role: "admin" },
+            { name: "Bob", role: "user" },
+            { name: "Charlie", role: "admin" }
+        ];
+
+        // 9. Group by property
+        // group people by role:
+        // {
+        //     admin: [...],
+        //     user: [...]
+        // }
+        const role = people.reduce((acc, item) => {
+            const key = item.role;
+
+            if (!acc[key]) {
+                acc[key] = [];
+            }
+
+            acc[key].push(item);
+
+            return acc;
+        }, {});
+        console.log(role)
+
+
+    </script>
+
+</body>
+
+</html>
