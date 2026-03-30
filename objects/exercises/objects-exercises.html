@@ -90,7 +90,16 @@
 
             return acc;
         }, {});
-        console.log(role)
+        console.log(role);
+
+        // 10. Remove object
+        // remove user "Alice" from the array.
+        const removeUser = people.filter((item) => {
+            return item.name !== "Alice";
+        });
+        console.log(removeUser);
+
+    
 
 
     </script>
