@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Aileron';
+  src: url("./font/fonts/Aileron-Regular.woff2") format('woff2'),
+    url("../text-styles/font/fonts/Aileron-Regular.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("./font/fonts/Roboto-Regular.woff2") format('woff2'),
+    url("./font/fonts/Roboto-Regular.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+/* General setup */
+
+html {
+  font-size: 10px;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 3.2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  word-spacing: 0.6rem;
+  font-family: "Aileron", sans-serif;
+}
