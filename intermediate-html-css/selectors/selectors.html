@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectos</title>
+
+    <style>
+
+        main > .group1 {
+            background-color: lightblue;
+        }
+
+        .group1 + div {
+            background-color: lightcoral;
+        }
+
+        .group1 + div + div {
+            background-color: lightgreen;
+        }
+
+        .group1 ~ div {
+            color: rebeccapurple;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <main class="parent">
+        <div class="child group1">
+            <div class="grand-child group">Group 1</div>
+        </div>
+        <div class="child group2">
+            <div class="grand-child group">Group 2</div>
+        </div>
+        <div class="child group3">
+            <div class="grand-child group">Group 3</div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
